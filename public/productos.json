@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "nombre": "Bicicleta Mountain Bike Venzo",
+    "precio": 650000,
+    "categoria": "Bicicletas MTB",
+    "imagen": "https://images.unsplash.com/photo-1576435728678-68d0fbf94e91?auto=format&fit=crop&w=800&q=80",
+    "descripcion": "Bicicleta Mountain Bike ideal para caminos de montaña, senderos y uso urbano."
+  },
+  {
+    "id": 2,
+    "nombre": "Bicicleta Urbana Rodado 28",
+    "precio": 480000,
+    "categoria": "Bicicletas Urbanas",
+    "imagen": "https://images.unsplash.com/photo-1502744688674-c619d1586c9e?auto=format&fit=crop&w=800&q=80",
+    "descripcion": "Bicicleta urbana cómoda y práctica para desplazarse por la ciudad."
+  },
+  {
+    "id": 3,
+    "nombre": "Bicicleta BMX Pro",
+    "precio": 390000,
+    "categoria": "BMX",
+    "imagen": "https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?auto=format&fit=crop&w=800&q=80",
+    "descripcion": "Bicicleta BMX resistente, ideal para trucos, saltos y circuitos urbanos."
+  },
+  {
+    "id": 4,
+    "nombre": "Casco Bell MTB",
+    "precio": 85000,
+    "categoria": "Cascos",
+    "imagen": "https://acdn-us.mitiendanube.com/stores/001/177/160/products/sin-titulo-101-5050ef62da5f5a828e15967522784150-480-0.webp",
+    "descripcion": "Casco para ciclismo con diseño liviano y protección para recorridos de montaña."
+  },
+  {
+    "id": 5,
+    "nombre": "Guantes para Ciclismo",
+    "precio": 35000,
+    "categoria": "Indumentaria",
+    "imagen": "https://acdn-us.mitiendanube.com/stores/001/177/160/products/horquilla-fox-38-performance-29-con-arcopuente-nuevo-44mm-offset-grip-170mm-sin-caja-8c6c433072923e016017784671882188-240-0.webp",
+    "descripcion": "Guantes deportivos con protección y agarre para mayor comodidad durante el recorrido."
+  },
+  {
+    "id": 6,
+    "nombre": "Luces LED para Bicicleta",
+    "precio": 28000,
+    "categoria": "Accesorios",
+    "imagen": "https://acdn-us.mitiendanube.com/stores/001/177/160/products/pbtllkn-600-12-2025-10-28t202033-414-ca10e926620fb939dd17616936834669-480-0.webp",
+    "descripcion": "Kit de luces LED delanteras y traseras para mejorar la visibilidad durante la noche."
+  },
+  {
+    "id": 7,
+    "nombre": "Kit de Herramientas para Bicicleta",
+    "precio": 45000,
+    "categoria": "Herramientas",
+    "imagen": "https://acdn-us.mitiendanube.com/stores/001/177/160/products/768686286636-1-573285090821b4946717335179491698-480-0.webp",
+    "descripcion": "Kit completo de herramientas para realizar mantenimiento básico de tu bicicleta."
+  },
+  {
+    "id": 8,
+    "nombre": "Inflador de Pie con Manómetro",
+    "precio": 42000,
+    "categoria": "Herramientas",
+    "imagen": "https://acdn-us.mitiendanube.com/stores/001/177/160/products/pbtllkn-600-12-2025-06-04t202805-815-c77f521e1989c6186117490797880963-480-0.webp",
+    "descripcion": "Inflador de pie con manómetro para controlar fácilmente la presión de las cubiertas."
+  },
+  {
+    "id": 9,
+    "nombre": "Portabotella de Aluminio",
+    "precio": 22000,
+    "categoria": "Accesorios",
+    "imagen": "https://acdn-us.mitiendanube.com/stores/001/177/160/products/diseno-sin-titulo-11-d56e9e6313a9ffe8e217761815167329-480-0.webp",
+    "descripcion": "Portabotella de aluminio liviano y resistente para llevar agua durante tus recorridos."
+  },
+  {
+    "id": 10,
+    "nombre": "Cubierta MTB Rodado 29",
+    "precio": 55000,
+    "categoria": "Repuestos",
+    "imagen": "https://acdn-us.mitiendanube.com/stores/001/177/160/products/diseno-sin-titulo131-6b9addbd4db7c8570f16807306158923-480-0.webp",
+    "descripcion": "Cubierta para bicicleta MTB rodado 29, diseñada para ofrecer buen agarre y durabilidad."
+  }
+]
