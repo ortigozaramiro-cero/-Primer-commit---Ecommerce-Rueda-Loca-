@@ -34,19 +34,16 @@ input {
 ========================================= */
 
 .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+
   background: #111111;
   color: white;
   padding: 30px 20px;
   border-bottom: 4px solid #b6d900;
-}
-
-.header-contenido {
-  max-width: 1200px;
-  margin: auto;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
 .header h1 {
@@ -56,68 +53,17 @@ input {
   letter-spacing: 2px;
 }
 
-.header p {
-  color: #b6d900;
-  font-size: 16px;
-  font-weight: bold;
-}
 
 /* =========================================
-   NAVBAR
-========================================= */
-
-.navbar {
-  background: #ffffff;
-  border-bottom: 1px solid #ddd;
-
-  position: sticky;
-  top: 0;
-
-  z-index: 100;
-}
-
-.nav-contenido {
-  max-width: 1200px;
-  margin: auto;
-
-  min-height: 65px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  padding: 0 20px;
-}
+   LOGO - HEADER
+   ========================================= */
 
 .logo {
   font-size: 24px;
   font-weight: 900;
-
-  color: #111111;
-
+  color: #ffffff;
   text-transform: uppercase;
-}
-
-.logo::before {
-  content: "🚲 ";
-}
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-}
-
-.nav-links a {
-  color: #222222;
-
-  font-weight: bold;
-
-  transition: all 0.2s ease;
-}
-
-.nav-links a:hover {
-  color: #7c9400;
+  text-decoration: none;
 }
 
 /* =========================================
@@ -142,10 +88,8 @@ input {
   text-align: center;
 
   background:
-    linear-gradient(
-      rgba(0, 0, 0, 0.70),
-      rgba(0, 0, 0, 0.70)
-    ),
+    linear-gradient(rgba(0, 0, 0, 0.70),
+      rgba(0, 0, 0, 0.70)),
     url("https://images.unsplash.com/photo-1541625602330-2277a4c46182?auto=format&fit=crop&w=1600&q=80");
 
   background-size: cover;
@@ -247,18 +191,6 @@ input {
   color: #111111;
 }
 
-/* =========================================
-   PRODUCTOS
-========================================= */
-
-.productos-container {
-  max-width: 1200px;
-
-  margin: auto;
-
-  padding: 70px 20px;
-}
-
 .titulo-seccion {
   text-align: center;
 
@@ -297,156 +229,8 @@ input {
 }
 
 /* =========================================
-   GRID PRODUCTOS
-========================================= */
-
-.productos-grid {
-  display: grid;
-
-  grid-template-columns:
-    repeat(4, 1fr);
-
-  gap: 25px;
-}
-
-/* =========================================
-   PRODUCT CARD
-========================================= */
-
-.producto-card {
-  background: white;
-
-  border-radius: 8px;
-
-  overflow: hidden;
-
-  border: 1px solid #e2e2e2;
-
-  box-shadow:
-    0 4px 15px rgba(0, 0, 0, 0.08);
-
-  transition: all 0.25s ease;
-}
-
-.producto-card:hover {
-  transform: translateY(-7px);
-
-  box-shadow:
-    0 10px 25px rgba(0, 0, 0, 0.15);
-}
-
-.producto-card img {
-  width: 100%;
-
-  height: 220px;
-
-  object-fit: cover;
-
-  display: block;
-}
-
-.producto-info {
-  padding: 22px;
-}
-
-.producto-info h3 {
-  margin: 10px 0;
-
-  font-size: 18px;
-
-  line-height: 1.3;
-
-  min-height: 47px;
-}
-
-.categoria {
-  display: inline-block;
-
-  font-size: 12px;
-
-  font-weight: 900;
-
-  color: #637500;
-
-  text-transform: uppercase;
-
-  letter-spacing: 1px;
-}
-
-.precio {
-  font-size: 24px;
-
-  font-weight: 900;
-
-  color: #111111;
-
-  margin-top: 15px;
-}
-
-/* =========================================
    DETALLE DEL PRODUCTO
 ========================================= */
-
-.detalle {
-  max-width: 1100px;
-
-  margin: 60px auto;
-
-  padding: 30px;
-
-  background: white;
-
-  border-radius: 10px;
-
-  display: grid;
-
-  grid-template-columns: 1fr 1fr;
-
-  gap: 50px;
-
-  box-shadow:
-    0 5px 25px rgba(0, 0, 0, 0.08);
-}
-
-.detalle-imagen img {
-  width: 100%;
-
-  height: 450px;
-
-  object-fit: cover;
-
-  border-radius: 8px;
-}
-
-.detalle-info {
-  display: flex;
-
-  flex-direction: column;
-
-  justify-content: center;
-}
-
-.detalle-info h2 {
-  font-size: 40px;
-
-  font-weight: 900;
-
-  margin: 15px 0;
-}
-
-.detalle-descripcion {
-  color: #666666;
-
-  line-height: 1.7;
-
-  margin-bottom: 20px;
-}
-
-.detalle-precio {
-  font-size: 34px;
-
-  margin-bottom: 25px;
-}
 
 .volver {
   margin-top: 20px;
@@ -464,51 +248,13 @@ input {
    CARRITO
 ========================================= */
 
-.carrito-vacio {
-  min-height: 600px;
-
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  text-align: center;
-
-  padding: 30px;
-}
-
-.carrito-vacio > div {
-  background: white;
-
-  padding: 60px;
-
-  border-radius: 10px;
-
-  box-shadow:
-    0 5px 20px rgba(0, 0, 0, 0.08);
-}
-
-.carrito-icono {
+.carrito-vacio .carrito-icono {
+  color: #b6d900;
   font-size: 65px;
-
   display: block;
-
   margin-bottom: 20px;
 }
 
-.carrito-vacio h2 {
-  font-size: 35px;
-
-  text-transform: uppercase;
-
-  margin-bottom: 15px;
-}
-
-.carrito-vacio p {
-  color: #666666;
-
-  line-height: 1.6;
-}
 
 /* =========================================
    MENSAJES
@@ -695,84 +441,22 @@ input {
 }
 
 /* =========================================
-   RESPONSIVE TABLET
-========================================= */
-
-@media (max-width: 1000px) {
-
-  .productos-grid {
-    grid-template-columns:
-      repeat(3, 1fr);
-  }
-
-  .footer-contenido {
-    grid-template-columns:
-      repeat(2, 1fr);
-  }
-
-}
-
-/* =========================================
-   RESPONSIVE
+   ENCABEZADO RESPONSIVE
 ========================================= */
 
 @media (max-width: 750px) {
-
-  .header-contenido {
+  .header {
     flex-direction: column;
-
     text-align: center;
-
-    gap: 10px;
-  }
-
-  .nav-contenido {
-    flex-direction: column;
-
     gap: 15px;
-
-    padding: 20px;
   }
 
-  .nav-links {
-    gap: 20px;
+  .header-nav {
+    justify-content: center;
   }
-
-  .home {
-    min-height: 550px;
-  }
-
-  .home h2 {
-    font-size: 40px;
-  }
-
-  .home p {
-    font-size: 18px;
-  }
-
-  .productos-grid {
-    grid-template-columns:
-      repeat(2, 1fr);
-  }
-
-  .detalle {
-    grid-template-columns: 1fr;
-
-    margin: 30px 20px;
-  }
-
-  .detalle-imagen img {
-    height: 350px;
-  }
-
 }
 
-/* =========================================
-   RESPONSIVE CELULAR
-========================================= */
-
 @media (max-width: 500px) {
-
   .header {
     padding: 25px 15px;
   }
@@ -781,11 +465,22 @@ input {
     font-size: 30px;
   }
 
-  .nav-links {
-    flex-direction: column;
-
+  .header-nav {
     gap: 12px;
   }
+
+  .header-nav a,
+  .header-nav button {
+    font-size: 14px;
+  }
+}
+
+/* =========================================
+   RESPONSIVE CELULAR
+========================================= */
+
+@media (max-width: 500px) {
+
 
   .home {
     min-height: 500px;
@@ -811,24 +506,8 @@ input {
     font-size: 28px;
   }
 
-  .productos-grid {
-    grid-template-columns: 1fr;
-  }
-
   .producto-card img {
     height: 240px;
-  }
-
-  .detalle {
-    padding: 20px;
-  }
-
-  .detalle-imagen img {
-    height: 280px;
-  }
-
-  .detalle-info h2 {
-    font-size: 30px;
   }
 
   .footer-contenido {
@@ -839,8 +518,1142 @@ input {
     grid-template-columns: 1fr;
   }
 
-  .carrito-vacio > div {
-    padding: 40px 25px;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.header-nav a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header-nav button {
+  cursor: pointer;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  background: #e63946;
+  color: white;
+}
+
+.error {
+  color: #d00000;
+}
+
+
+/* =========================================
+   CATÁLOGO Y TARJETAS DE PRODUCTOS
+========================================= */
+
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  align-items: stretch;
+}
+
+.producto-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: white;
+  border: 1px solid #e2e2e2;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.25s ease;
+}
+
+.producto-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.producto-card img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  background: white;
+  padding: 10px;
+}
+
+/* INFORMACIÓN DEL PRODUCTO */
+
+.producto-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 22px;
+}
+
+.producto-info h3 {
+  min-height: 52px;
+  margin: 10px 0;
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+.producto-descripcion {
+  height: 4.5em;
+  min-height: 4.5em;
+  margin-top: 10px;
+  color: #666;
+  line-height: 1.5;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* PRECIO */
+
+.precio {
+  margin-top: auto;
+  padding-top: 15px;
+  font-size: 24px;
+  font-weight: 900;
+  color: #111;
+}
+
+/* BOTONES */
+
+.producto-acciones {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.producto-acciones .btn-detalle {
+  display: block;
+  margin-top: 0;
+  padding: 11px 20px;
+  border-radius: 5px;
+  background: #111;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.producto-acciones .btn-detalle:hover {
+  background: #b6d900;
+  color: #111;
+}
+
+.btn-agregar {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  background: #b6d900;
+  color: #111;
+  font-weight: 900;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-agregar:hover {
+  background: #d2f500;
+  transform: translateY(-2px);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+  .productos-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 
+  .footer-contenido {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* =========================================
+   DETALLE PRODUCTO - RUEDA LOCA
+========================================= */
+
+.detalle-producto {
+  max-width: 1150px;
+  margin: 60px auto;
+  padding: 35px;
+  background: white;
+  border-radius: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 50px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+.detalle-producto-imagen {
+  background: #f5f5f5;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.detalle-producto-imagen img {
+  display: block;
+  width: 100%;
+  height: 430px;
+  object-fit: contain;
+  padding: 15px;
+}
+
+.detalle-producto-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.detalle-etiqueta {
+  color: #7c9400;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+.detalle-producto-info h2 {
+  font-size: 38px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.detalle-producto-precio {
+  font-size: 35px;
+  font-weight: 900;
+  margin-bottom: 25px;
+}
+
+.detalle-producto-info .btn-principal {
+  font-size: 15px;
+}
+
+.detalle-producto-info .volver {
+  margin-top: 25px;
+}
+
+/* TABLET */
+
+@media (max-width: 750px) {
+  .detalle-producto {
+    grid-template-columns: 1fr;
+    margin: 30px 20px;
+    padding: 25px;
+    gap: 30px;
+  }
+
+  .detalle-producto-imagen img {
+    height: 350px;
+  }
+
+  .detalle-producto-info h2 {
+    font-size: 32px;
+  }
+}
+
+/* CELULAR */
+
+@media (max-width: 500px) {
+  .detalle-producto {
+    margin: 20px 12px;
+    padding: 18px;
+  }
+
+  .detalle-producto-imagen img {
+    height: 260px;
+  }
+
+  .detalle-producto-info h2 {
+    font-size: 27px;
+  }
+
+  .detalle-producto-descripcion {
+    font-size: 15px;
+  }
+
+  .detalle-producto-precio {
+    font-size: 29px;
+  }
+
+  .detalle-producto-info .btn-principal {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* =========================================
+   CARRITO - RUEDA LOCA
+========================================= */
+
+.carrito {
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 25px 20px;
+}
+
+.carrito-titulo {
+  font-size: 36px;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* CARRITO VACÍO */
+
+.carrito-vacio {
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  text-align: center;
+}
+
+.carrito-vacio>div {
+  padding: 60px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.carrito-vacio h2 {
+  font-size: 35px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.carrito-vacio p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* PRODUCTOS */
+
+.carrito-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.carrito-producto {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 25px;
+  background: white;
+  border-left: 5px solid #b6d900;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+.carrito-producto img {
+  width: 180px;
+  height: 140px;
+  object-fit: contain;
+  background: #f5f5f5;
+  border-radius: 6px;
+  padding: 8px;
+}
+
+.carrito-producto-info {
+  flex: 1;
+}
+
+.carrito-producto-info h3 {
+  font-size: 21px;
+  margin-bottom: 12px;
+}
+
+.carrito-precio {
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.carrito-subtotal {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* CANTIDADES */
+
+.cantidad {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.cantidad button {
+  width: 35px;
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+  background: #b6d900;
+  color: #111;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cantidad span {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.btn-eliminar {
+  padding: 9px 15px;
+  border: none;
+  border-radius: 5px;
+  background: #dc2626;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* RESUMEN DE COMPRA */
+
+.carrito-resumen {
+  max-width: 450px;
+  margin: 35px 0 0 auto;
+  padding: 30px;
+  background: white;
+  border-top: 5px solid #b6d900;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.carrito-resumen h3 {
+  font-size: 23px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.carrito-resumen-total {
+  font-size: 30px;
+  font-weight: 900;
+  margin-bottom: 25px;
+}
+
+.btn-vaciar,
+.btn-finalizar {
+  width: 100%;
+  padding: 13px;
+  margin-top: 12px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 900;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.btn-vaciar {
+  background: #333;
+  color: white;
+}
+
+.btn-finalizar {
+  background: #b6d900;
+  color: #111;
+}
+
+.btn-vaciar:hover,
+.btn-finalizar:hover {
+  opacity: 0.85;
+}
+
+.btn-finalizar:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.carrito-login {
+  margin-top: 18px;
+  line-height: 1.6;
+}
+
+.carrito-login a {
+  color: #637500;
+  font-weight: bold;
+}
+
+/* COMPRA EXITOSA */
+
+.carrito-exito {
+  min-height: 550px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 20px;
+}
+
+.carrito-exito-contenido {
+  width: 100%;
+  max-width: 550px;
+  padding: 50px 30px;
+  background: white;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.carrito-exito-icono {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 75px;
+  height: 75px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  background: #b6d900;
+  color: #111;
+  font-size: 45px;
+  font-weight: bold;
+}
+
+.carrito-exito-contenido h2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.carrito-exito-contenido p {
+  color: #666;
+  margin-bottom: 12px;
+}
+
+.carrito-exito-contenido .btn-principal {
+  margin-top: 20px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 650px) {
+  .carrito {
+    margin: 25px auto;
+    padding: 15px;
+  }
+
+  .carrito-titulo {
+    font-size: 28px;
+    margin-bottom: 25px;
+  }
+
+  .carrito-producto {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 18px;
+    padding: 18px;
+  }
+
+  .carrito-producto img {
+    width: 100%;
+    height: 200px;
+  }
+
+  .carrito-resumen {
+    max-width: none;
+    margin-top: 25px;
+    padding: 22px;
+  }
+
+  .carrito-resumen-total {
+    font-size: 26px;
+  }
+
+  .carrito-vacio>div {
+    padding: 30px 20px;
+  }
+
+  .carrito-vacio h2 {
+    font-size: 27px;
+  }
+}
+
+/* =========================================
+   HISTORIAL DE PEDIDOS - RUEDA LOCA
+========================================= */
+
+
+
+
+.mis-pedidos {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  min-height: 70vh;
+}
+
+.pedidos-encabezado {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.pedidos-encabezado span {
+  color: #819900;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.pedidos-encabezado h2 {
+  color: #111;
+  font-size: 30px;
+  margin: 12px 0;
+}
+
+.pedidos-encabezado p {
+  color: #666;
+}
+
+.pedidos-resumen {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.pedidos-resumen strong {
+  color: #111;
+}
+
+.pedidos-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.pedido-card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border-left: 5px solid #b6d900;
+}
+
+.pedido-encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #eee;
+}
+
+.pedido-etiqueta {
+  color: #777;
+  font-size: 12px;
+}
+
+.pedido-encabezado h3 {
+  font-size: 13px;
+  color: #111;
+  margin-top: 6px;
+  overflow-wrap: anywhere;
+}
+
+.pedido-estado {
+  background: #f0f5d9;
+  color: #536600;
+  padding: 8px 13px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.pedido-fecha {
+  margin: 18px 0;
+  color: #555;
+  font-size: 14px;
+}
+
+.pedido-productos h4 {
+  margin-bottom: 15px;
+  color: #111;
+}
+
+.pedido-producto {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 15px 0;
+  border-top: 1px solid #eee;
+}
+
+.pedido-producto img {
+  width: 85px;
+  height: 75px;
+  object-fit: contain;
+  background: #f5f5f5;
+  border-radius: 6px;
+}
+
+.pedido-producto-info {
+  flex: 1;
+}
+
+.pedido-producto-info h5 {
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+.pedido-producto-info p {
+  color: #666;
+  font-size: 13px;
+  margin: 3px 0;
+}
+
+.pedido-producto-subtotal {
+  color: #111;
+  white-space: nowrap;
+}
+
+.pedido-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 2px solid #eee;
+  margin-top: 15px;
+  padding-top: 20px;
+  font-size: 17px;
+}
+.pedido-total span {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.pedido-total strong {
+  font-size: 22px;
+  color: #536600;
+}
+
+.pedidos-vacio {
+  background: white;
+  text-align: center;
+  padding: 50px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+.pedidos-vacio p {
+  color: #666;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+.pedidos-icono {
+  font-size: 45px;
+}
+
+.pedidos-vacio h3 {
+  margin: 15px 0;
+}
+
+
+.pedidos-vacio .btn-principal {
+  display: inline-block;
+  padding: 12px 22px;
+  background: #b6d900;
+  color: #111;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+}
+.perfil-mensaje,
+.pedidos-mensaje {
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.perfil-mensaje {
+  font-size: 18px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+  .mis-pedidos {
+    padding: 30px 15px;
+  }
+
+  .pedidos-encabezado h2 {
+    font-size: 24px;
+  }
+
+  .pedido-card {
+    padding: 18px;
+  }
+
+  .pedido-producto {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .pedido-producto img {
+    width: 70px;
+    height: 65px;
+  }
+
+  .pedido-producto-info {
+    min-width: 0;
+  }
+
+  .pedido-producto-subtotal {
+    width: 100%;
+    text-align: right;
+  }
+
+  .pedido-total {
+    font-size: 15px;
+  }
+
+  .pedido-total strong {
+    font-size: 19px;
+  }
+}
+/* =========================================
+   CATÁLOGO EN CELULARES
+========================================= */
+
+@media (max-width: 500px) {
+  .productos-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .producto-card {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .producto-info {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .producto-info h3 {
+    min-height: auto;
+  }
+
+  .producto-descripcion {
+    height: 4.5em;
+    min-height: 4.5em;
+  }
+
+  .producto-acciones {
+    width: 100%;
+  }
+}
+/* =========================================
+   PERFIL - RUEDA LOCA
+========================================= */
+
+.perfil-container {
+  min-height: 65vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+.perfil-card {
+  width: 100%;
+  max-width: 600px;
+  background: white;
+  border-radius: 12px;
+  padding: 35px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+  border-top: 5px solid #b6d900;
+}
+
+.perfil-encabezado {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.perfil-avatar {
+  width: 85px;
+  height: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  background: #b6d900;
+  color: #111;
+  font-size: 38px;
+  font-weight: 900;
+}
+
+.perfil-encabezado h2 {
+  font-size: 30px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.perfil-encabezado p {
+  color: #777;
+}
+
+.perfil-datos {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.perfil-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 15px;
+  background: #f5f5f5;
+  border-radius: 6px;
+}
+
+.perfil-item span {
+  color: #777;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.perfil-item strong {
+  color: #111;
+  overflow-wrap: anywhere;
+}
+
+
+
+@media (max-width: 500px) {
+  .perfil-container {
+    padding: 30px 15px;
+  }
+
+  .perfil-card {
+    padding: 25px 18px;
+  }
+
+  .perfil-encabezado h2 {
+    font-size: 25px;
+  }
+}
+/* =========================================
+   LOGIN Y REGISTRO
+========================================= */
+
+.login-container,
+.registro-container {
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+.login-card,
+.registro-card {
+  width: 100%;
+  padding: 35px;
+  background: white;
+  border-radius: 12px;
+  border-top: 5px solid #b6d900;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+.login-card {
+  max-width: 450px;
+}
+
+.registro-card {
+  max-width: 480px;
+}
+
+.login-encabezado,
+.registro-encabezado {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.login-encabezado h2,
+.registro-encabezado h2 {
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.login-encabezado h2 {
+  font-size: 27px;
+}
+
+.registro-encabezado h2 {
+  font-size: 28px;
+}
+
+.login-encabezado p,
+.registro-encabezado p {
+  color: #777;
+  line-height: 1.5;
+}
+
+.login-formulario,
+.registro-formulario {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-formulario {
+  gap: 20px;
+}
+
+.registro-formulario {
+  gap: 18px;
+}
+
+.login-campo,
+.registro-campo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.login-campo label,
+.registro-campo label {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.login-campo input,
+.registro-campo input {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  font-size: 15px;
+}
+
+.login-campo input:focus,
+.registro-campo input:focus {
+  border-color: #b6d900;
+  box-shadow: 0 0 0 2px rgba(182, 217, 0, 0.2);
+}
+
+.login-formulario button,
+.registro-formulario button {
+  padding: 13px;
+  border: none;
+  border-radius: 6px;
+  background: #b6d900;
+  color: #111;
+  font-weight: 900;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.login-formulario button:hover,
+.registro-formulario button:hover {
+  background: #d2f500;
+}
+
+.login-formulario button:disabled,
+.registro-formulario button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.login-pie,
+.registro-pie {
+  margin-top: 25px;
+  text-align: center;
+  color: #666;
+}
+
+.login-pie a,
+.registro-pie a {
+  color: #637500;
+  font-weight: bold;
+}
+
+.login-pie a:hover,
+.registro-pie a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 500px) {
+  .login-container,
+  .registro-container {
+    padding: 30px 15px;
+  }
+
+  .login-card,
+  .registro-card {
+    padding: 25px 20px;
+  }
+
+  .login-encabezado h2 {
+    font-size: 23px;
+  }
+
+  .registro-encabezado h2 {
+    font-size: 24px;
+  }
+}
+
+/* BUSCADOR DE PRODUCTOS */
+.buscador-productos {
+  width: 100%;
+  max-width: 550px;
+  margin: 25px auto;
+}
+
+.buscador-productos input {
+  width: 100%;
+  padding: 14px 18px;
+  border: 2px solid #cccccc;
+  border-radius: 30px;
+  outline: none;
+  background: #ffffff;
+  color: #111111;
+  font-size: 16px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.buscador-productos input:focus {
+  border-color: #b6d900;
+  box-shadow: 0 0 0 3px rgba(182, 217, 0, 0.2);
+}
+
+.buscador-productos input::placeholder {
+  color: #888888;
+}
+
+.resultados-productos {
+  text-align: center;
+  margin: 15px 0 25px;
+  color: #555555;
+  font-weight: bold;
+}
+
+@media (max-width: 500px) {
+  .buscador-productos {
+    margin: 20px auto;
+  }
+
+  .buscador-productos input {
+    font-size: 14px;
+    padding: 12px 15px;
+  }
 }

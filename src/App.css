@@ -1,0 +1,274 @@
+
+.carrito-icono {
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+  position: relative;
+}
+
+.contador-carrito {
+  background: red;
+  color: white;
+  border-radius: 50%;
+  padding: 3px 7px;
+  font-size: 12px;
+}
+
+
+/* =========================================
+   PANEL DE ADMINISTRACIÓN - RUEDA LOCA
+========================================= */
+
+.admin-container {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 30px 20px;
+}
+
+.admin-container h1 {
+  text-align: center;
+  color: #111111;
+  font-size: 36px;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.admin-container h1::after {
+  content: "";
+  display: block;
+  width: 75px;
+  height: 5px;
+  background: #b6d900;
+  margin: 15px auto 0;
+}
+
+/* FORMULARIO */
+
+.admin-form {
+  max-width: 650px;
+  margin: 0 auto 60px;
+  padding: 35px;
+  background: #ffffff;
+  border-radius: 10px;
+  border-top: 5px solid #b6d900;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.admin-form h2 {
+  color: #111111;
+  font-size: 24px;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.admin-form input,
+.admin-form textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #dddddd;
+  border-radius: 6px;
+  background: #f8f8f8;
+  color: #222222;
+  font-size: 15px;
+  font-family: inherit;
+  transition: 0.2s;
+}
+
+.admin-form textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.admin-form input:focus,
+.admin-form textarea:focus {
+  outline: none;
+  border-color: #b6d900;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(182, 217, 0, 0.15);
+}
+
+/* BOTONES DEL FORMULARIO */
+
+.admin-form button {
+  padding: 14px;
+  border: none;
+  border-radius: 5px;
+  background: #b6d900;
+  color: #111111;
+  font-size: 15px;
+  font-weight: 900;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.admin-form button:hover:not(:disabled) {
+  background: #d2f500;
+  transform: translateY(-2px);
+}
+
+.admin-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.admin-form button[type="button"] {
+  background: #555555;
+  color: #ffffff;
+}
+
+.admin-form button[type="button"]:hover {
+  background: #333333;
+}
+
+/* MENSAJES DE ERROR */
+
+.admin-error {
+  padding: 12px;
+  border-radius: 6px;
+  background: #ffe5e5;
+  color: #c00000;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* LISTADO DE PRODUCTOS */
+
+.admin-lista h2 {
+  color: #111111;
+  font-size: 28px;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.admin-producto {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+
+  padding: 20px;
+  margin-bottom: 18px;
+
+  background: #ffffff;
+  border: 1px solid #e2e2e2;
+  border-left: 5px solid #b6d900;
+  border-radius: 8px;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: 0.2s;
+}
+
+.admin-producto:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 18px rgba(0, 0, 0, 0.10);
+}
+
+.admin-producto img {
+  width: 130px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 6px;
+  background: #f5f5f5;
+}
+
+.admin-producto div {
+  flex: 1;
+}
+
+.admin-producto h3 {
+  color: #111111;
+  font-size: 19px;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+
+.admin-producto p {
+  color: #666666;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.admin-producto strong {
+  color: #637500;
+  font-size: 20px;
+}
+
+/* BOTONES DE ACCIÓN */
+
+.admin-producto button {
+  padding: 11px 18px;
+  border: none;
+  border-radius: 5px;
+  background: #111111;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.admin-producto button:hover {
+  background: #333333;
+}
+
+.admin-producto button:last-child {
+  background: #dc2626;
+}
+
+.admin-producto button:last-child:hover {
+  background: #b91c1c;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 750px) {
+  .admin-container {
+    margin: 25px auto;
+    padding: 20px 15px;
+  }
+
+  .admin-container h1 {
+    font-size: 28px;
+  }
+
+  .admin-form {
+    padding: 22px;
+  }
+
+  .admin-producto {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .admin-producto img {
+    width: 100%;
+    height: 180px;
+  }
+
+  .admin-producto div {
+    flex-basis: 100%;
+  }
+
+  .admin-producto button {
+    flex: 1;
+  }
+}
+
+@media (max-width: 450px) {
+  .admin-producto {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .admin-producto button {
+    width: 100%;
+  }
+}

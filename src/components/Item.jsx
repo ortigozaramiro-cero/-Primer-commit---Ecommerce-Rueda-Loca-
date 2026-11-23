@@ -1,36 +1,44 @@
+
 import { Link } from "react-router-dom";
+import useCarrito from "../context/hooks/useCarrito";
 
 function Item({ producto }) {
+  const { agregarAlCarrito } = useCarrito();
 
   return (
     <article className="producto-card">
-
       <img
         src={producto.imagen}
         alt={producto.nombre}
       />
 
       <div className="producto-info">
-
-        <span className="categoria">
-          {producto.categoria}
-        </span>
-
         <h3>{producto.nombre}</h3>
 
-        <p className="precio">
-          ${producto.precio.toLocaleString("es-AR")}
+        <p className="producto-descripcion">
+          {producto.descripcion}
         </p>
 
-        <Link
-          to={`/producto/${producto.id}`}
-          className="btn-detalle"
-        >
-          Ver detalle
-        </Link>
+        <p className="precio">
+          ${producto.precio}
+        </p>
 
+        <div className="producto-acciones">
+          <Link
+            to={`/producto/${producto.id}`}
+            className="btn-detalle"
+          >
+            Ver detalle
+          </Link>
+
+          <button
+            className="btn-agregar"
+            onClick={() => agregarAlCarrito(producto)}
+          >
+            Agregar al carrito
+          </button>
+        </div>
       </div>
-
     </article>
   );
 }
